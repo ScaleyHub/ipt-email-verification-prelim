@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg text-info bg-info mb-2">
+<nav class="navbar navbar-expand-lg text-info bg-secondary mb-2">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" style="color:white;">Guitar Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

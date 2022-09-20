@@ -40,11 +40,10 @@
  
          <div class="form-floating mb-3">
             <select name="guitar_name" class="form-select" wire:model.defer='guitar_name'>
-             <option hidden="true">Select Guitar</option>
-             <option selected disabled>Select Guitar</option>
-             <option value="Charter Guitar Corp.">Charter Guitar Corp.</option>
-             <option value="Dragon Lines Guitar">Dragon Lines Guitar</option>
-             <option value="Ceres Guitar Lines">Ceres Guitar Lines</option>
+             <option hidden="true">Select Preferred Pick-up </option>
+             <option selected disabled>Select Pick-Up</option>
+             <option value="Humbucker.">Humbucker</option>
+             <option value="Single Coil">Single Coil</option>
             </select>
             <label for="guitar_name">Guitar Name</label>
             @error('guitar_name')
