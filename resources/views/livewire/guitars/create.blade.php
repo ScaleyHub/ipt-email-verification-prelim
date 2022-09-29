@@ -35,28 +35,27 @@
             <div class="text-danger">{{$message}}</div>
             @enderror
         </div>
-        <div class="form-floating mb-3">
+        <!-- <div class="form-floating mb-3">
             <input type="text" class="form-control" wire:model.debounce.500ms='email'>
             <label for="email">Email</label>
             @error('email')
             <div class="text-danger">{{$message}}</div>
             @enderror
-        </div>
+        </div> -->
 
         
-
+<!-- 
         <div class="form-floating mb-3">
            <select name="guitar_name" class="form-select" wire:model.defer='guitar_name'>
-            <option hidden="true">Select Pick-Up</option>
-            <option selected disabled>Select Pick-Up</option>
-            <option value="Humbucker.">Humbucker.</option>
-            <option value="Single Coil">Single Coil</option>
+            <option hidden="true">Choose Type</option>
+            <option value="Stratocaster">Stratocaster</option>
+            <option value="Telecaster">Telecaster</option>
            </select>
-           <label for="guitar_name">Guitar Name</label>
+           <label for="guitar_name">Guitar Type</label>
            @error('guitar_name')
             <div class="text-danger">{{$message}}</div>
             @enderror
-        </div>
+        </div> -->
          <div class="form-group mb-3 d-grid gap-2 d-md-flex justify-content-end">
             <button class="btn btn-success" type="submit" wire:click='addGuitar()'>
                 Add Guitar

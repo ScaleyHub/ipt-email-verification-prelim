@@ -33,6 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('/guitar', [GuitarController::class, 'index']);
-    Route::get('/edit/{guitar}', [GuitarController::class, 'edit']);
-    Route::get('/delete/{guitar}', [GuitarController::class, 'destroy']);
+    Route::get('/edit/{guitars}', [GuitarController::class, 'edit']);
+    Route::get('/delete/{guitars}', [GuitarController::class, 'destroy']);
 });

@@ -16,7 +16,7 @@ class Create extends Component
                 'brand'            => ['required','string','max:255'],
                 'material'     => ['required','string','max:255'],
                 'year_model'         => ['required','string','max:255'],
-                'email'   =>  ['required','email','unique:guitars'],
+                // 'email'   =>  ['required','email','unique:guitars'],
             
             ]);
     
@@ -25,19 +25,19 @@ class Create extends Component
                 'brand'             => $this->brand,
                 'material'      => $this->material,
                 'year_model'          => $this->year_model,
-                'email' => $this->email,
+                // 'email' => $this->email,
             ]);
 
-            return redirect('/dashboard')->with('message', $this->passenger_name . ' added successfully');
+            return redirect('/dashboard')->with('message', $this->guitar_name . ' added successfully');
     }
 
-    public function updated($propertyEmail)
-    {
-        $this->validateOnly($propertyEmail, [
-            'email'             => ['required','email','unique:guitars'],
+    // public function updated($propertyEmail)
+    // {
+    //     $this->validateOnly($propertyEmail, [
+    //         'email'             => ['required','email','unique:guitars'],
             
-        ]);
-    }
+    //     ]);
+    // }
 
     public function render()
     {

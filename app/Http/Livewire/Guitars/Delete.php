@@ -9,7 +9,7 @@ class Delete extends Component
 {
     public $guitarId;
     public function getGuitarProperty() {
-        return Guitar::select('id','guitar_name', 'brand', 'material', 'year model')
+        return Guitar::select('id','guitar_name', 'brand', 'material', 'year_model')
             ->find($this->guitarId);
     }
 

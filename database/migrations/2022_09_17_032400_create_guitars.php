@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('guitar_name');
             $table->string('brand');
             $table->string('material');
-            $table->string('year model');
+            $table->string('year_model');
             $table->timestamps();
         });
     }

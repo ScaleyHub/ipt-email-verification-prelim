@@ -17,7 +17,6 @@
                     <td>{{ $guitar->brand }}</td>
                     <td>{{ $guitar->material }}</td>
                     <td>{{ $guitar->year_model }}</td>
-                    <td>{{ $guitar->passenger_name }}</td>
                     <td>
                         <a href="{{ url('edit', ['guitar' => $guitar->id]) }}" class="btn btn-sm btn-warning">Edit</a>
                     </td>
