@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GuitarController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,4 +36,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/guitar', [GuitarController::class, 'index']);
     Route::get('/edit/{guitars}', [GuitarController::class, 'edit']);
     Route::get('/delete/{guitars}', [GuitarController::class, 'destroy']);
+    Route::get('/logs', [SiteController::class, 'logs']);
 });

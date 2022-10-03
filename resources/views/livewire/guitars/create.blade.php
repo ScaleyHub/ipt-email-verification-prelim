@@ -44,18 +44,18 @@
         </div> -->
 
         
-<!-- 
-        <div class="form-floating mb-3">
-           <select name="guitar_name" class="form-select" wire:model.defer='guitar_name'>
-            <option hidden="true">Choose Type</option>
-            <option value="Stratocaster">Stratocaster</option>
-            <option value="Telecaster">Telecaster</option>
-           </select>
-           <label for="guitar_name">Guitar Type</label>
-           @error('guitar_name')
-            <div class="text-danger">{{$message}}</div>
-            @enderror
-        </div> -->
+    <!-- 
+            <div class="form-floating mb-3">
+            <select name="guitar_name" class="form-select" wire:model.defer='guitar_name'>
+                <option hidden="true">Choose Type</option>
+                <option value="Stratocaster">Stratocaster</option>
+                <option value="Telecaster">Telecaster</option>
+            </select>
+            <label for="guitar_name">Guitar Type</label>
+            @error('guitar_name')
+                <div class="text-danger">{{$message}}</div>
+                @enderror
+            </div> -->
          <div class="form-group mb-3 d-grid gap-2 d-md-flex justify-content-end">
             <button class="btn btn-success" type="submit" wire:click='addGuitar()'>
                 Add Guitar

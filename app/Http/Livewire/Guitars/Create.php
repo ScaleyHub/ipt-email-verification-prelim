@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Guitars;
 
 use App\Models\Guitar;
 use Livewire\Component;
+use App\Events\UserLog;
 
 class Create extends Component
 {
@@ -19,14 +20,17 @@ class Create extends Component
                 // 'email'   =>  ['required','email','unique:guitars'],
             
             ]);
-    
-            Guitar::create([
-                'guitar_name'        => $this->guitar_name,
+            
+            $guitar = Guitar::create([
+                'guitar_name'       => $this->guitar_name,
                 'brand'             => $this->brand,
-                'material'      => $this->material,
-                'year_model'          => $this->year_model,
+                'material'          => $this->material,
+                'year_model'        => $this->year_model,
                 // 'email' => $this->email,
             ]);
+
+            $log_entry = 'Added a new Guitar "' . $guitar->guitar_name . '" with the ID no. of ' .  $guitar->id;
+            event(new UserLog($log_entry));
 
             return redirect('/dashboard')->with('message', $this->guitar_name . ' added successfully');
     }

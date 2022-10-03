@@ -4,6 +4,7 @@ namespace App\Http\Livewire\Guitars;
 
 use App\Models\Guitar;
 use Livewire\Component;
+use App\Events\UserLog;
 
 class Edit extends Component
 {
@@ -35,6 +36,9 @@ class Edit extends Component
             'year_model'             => $this->year_model,
             
         ]);
+
+       $log_entry = 'Updated "' . $this->guitar_name . '"with the ID no. ' .$this->guitar->id;
+       event(new UserLog($log_entry));
 
         return redirect('/dashboard')->with('message', $this->guitar->guitar_name .' updated successfully');
     }
