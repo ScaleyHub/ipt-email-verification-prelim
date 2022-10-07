@@ -1,5 +1,38 @@
-<div>
+    <div>
     <table class="table table-striped text-center mt-4 shadow-lg p-3 mb-5 bg-white rounded">
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <select class="form-select" wire:model.lazy="brand">
+                        <option value="all">All</option>
+                        <option value="Fender">Fender</option>
+                        <option value="Ibanez">Ibanez</option>
+                        <option value="Tagima">Tagima</option>
+                        <option value="Gretsch">Gretsch</option>
+                        <option value="Gibson">Gibson</option>
+                        <option value="Guild">Guild</option>
+                    </select>
+                </div>
+                <div class="col">
+                        <select class="form-select" wire:model.lazy="material">
+                        <option value="all">All</option>
+                        <option value="Alder">Alder</option>
+                        <option value="Basswood">Basswood</option>
+                        <option value="Mahogany">Mahogany</option>
+                        <option value="Maple">Maple</option>
+                        <option value="Rosewood">Rosewood</option>
+                        <option value="Ebony">Ebony</option>
+                        </select>
+                        
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Search" wire:model="search">
+            </div>
+            </div>
+    
+            
+        </div>
         <thead class="table table-bordered">
             <tr>
                 <th>Guitar Name</th>
@@ -27,5 +60,6 @@
             @endforeach
         </tbody>
     </table>
+    {{$guitars->links()}}
 </div>
 

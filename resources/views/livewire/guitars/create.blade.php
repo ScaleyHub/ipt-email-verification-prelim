@@ -13,18 +13,36 @@
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" wire:model.defer='brand'>
-            <label for="brand">Brand</label>
+            <select name="brand" class="form-select" wire:model.defer="brand">
+                <option hidden="true">Select Brand</option>
+                <option selected disabled>Select Brand</option>
+                <option value="Fender">Fender</option>
+                <option value="Ibanez">Ibanez</option>
+                <option value="Tagima">Tagima</option>
+                <option value="Gretsch">Gretsch</option>
+                <option value="Gibson">Gibson</option>
+                <option value="Guild">Guild</option>
+            </select>
+            <label for="brand">Guitar Brand</label>
             @error('brand')
-            <div class="text-danger">{{$message}}</div>
+                <p class="text-danger">{{ $message }}</p>
             @enderror
         </div>
 
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" wire:model.defer='material'>
-            <label for="material">Material</label>
+            <select name="material" class="form-select" wire:model.defer="material">
+                <option hidden="true">Select Material</option>
+                <option selected disabled>Select Material</option>
+                <option value="Alder">Alder</option>
+                <option value="Basswood">Basswood</option>
+                <option value="Mahogany">Mahogany</option>
+                <option value="Maple">Maple</option>
+                <option value="Rosewood">Rosewood</option>
+                <option value="Ebony">Ebony</option>
+            </select>
+            <label for="material">Guitar Material</label>
             @error('material')
-            <div class="text-danger">{{$message}}</div>
+                <p class="text-danger">{{ $message }}</p>
             @enderror
         </div>
 
